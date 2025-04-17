@@ -2,37 +2,36 @@
 import PageContainer from "@/components/PageContainer";
 
 const Gallery = () => {
-  // We'll use placeholder images, but in a real project these would be replaced with actual images
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      alt: "Computer Lab 1",
+      src: "https://images.unsplash.com/photo-1551650975-87deedd944c3",  // Laptop repair with technician
+      alt: "Laptop Repair Service",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      alt: "Computer Lab 2",
+      src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f",  // Technician working on laptop
+      alt: "Computer Diagnostic",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      alt: "Repair Center",
+      src: "https://images.unsplash.com/photo-1593941707681-8845cd4193bc",  // TV repair workshop
+      alt: "TV Repair Center",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      alt: "Mobile Repair",
+      src: "https://images.unsplash.com/photo-1603951629537-22fb274de197",  // TV technician working
+      alt: "TV Technician at Work",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1581092921461-39b788893b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      alt: "Laptop Repair",
+      src: "https://images.unsplash.com/photo-1497005367839-6ea852de8c01",  // Multiple laptop repairs
+      alt: "Multiple Device Repairs",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1576440824052-7430c358b5e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80",
-      alt: "TV Repair",
+      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",  // Laptop on desk
+      alt: "Laptop Service Station",
     },
   ];
 
@@ -40,7 +39,7 @@ const Gallery = () => {
     <PageContainer>
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-primary text-center mb-12">Our Gallery</h1>
+          <h1 className="text-4xl font-bold text-primary text-center mb-12">Our Repair Gallery</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {galleryImages.map((image) => (
@@ -53,6 +52,9 @@ const Gallery = () => {
                   alt={image.alt} 
                   className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="p-4 bg-white">
+                  <p className="text-center text-gray-700">{image.alt}</p>
+                </div>
               </div>
             ))}
           </div>
